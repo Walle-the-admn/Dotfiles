@@ -1,0 +1,8 @@
+# AutoFS config for the machine Marvin
+# Automatically mounts Marvin's SMB shares
+
+# Written January 22, 2026 by walle
+# Last updated January 22, 2026 by walle
+
+# Bartprogs
+Bartprogs -fstype=cifs,credentials=/home/jacobt/.credentials/Marvin,uid=1000,gid=1000 ://10.10.10.107/Bartprogs

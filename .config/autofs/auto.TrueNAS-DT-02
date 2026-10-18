@@ -1,0 +1,17 @@
+# AutoFS config for the server TrueNAS-DT-02
+# Automatically mounts TrueNAS-DT-02's SMB shares
+
+# Written January 10, 2026 by walle
+# Last updated June 1, 2026 by walle
+
+
+# Pool: Data2
+
+# Clonezilla-Test
+#Clonezilla-Test -fstype=cifs,credentials=/home/jacobt/.credentials/TrueNAS-DT-02,uid=1000,gid=1000 ://172.17.2.52/Clonezilla-Test
+
+# Proxmox
+#Proxmox -fstype=cifs,credentials=/home/jacobt/.credentials/TrueNAS-DT-02,uid=1000,gid=1000 ://172.17.2.52/Proxmox
+
+# Replication-Destination
+#Replication-Destination -fstype=cifs,credentials=/home/jacobt/.credentials/TrueNAS-DT-02,uid=1000,gid=1000 ://172.17.2.52/Replication-Destination
