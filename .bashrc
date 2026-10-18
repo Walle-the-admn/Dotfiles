@@ -76,9 +76,21 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    #alias grep='grep --color=auto'
+    #alias fgrep='fgrep --color=auto'
+    #alias egrep='egrep --color=auto'
 fi
 
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# some more ls aliases
+#alias ll='ls -l'
+#alias la='ls -A'
+#alias l='ls -CF'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -88,9 +100,6 @@ fi
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-
-# Alias for dit and my dotfiles
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -102,3 +111,36 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+##-----------------------------------------------------
+## synth-shell-greeter.sh
+if [ -f /home/jacobt/.config/synth-shell/synth-shell-greeter.sh ] && [ -n "$( echo $- | grep i )" ]; then
+	source /home/jacobt/.config/synth-shell/synth-shell-greeter.sh
+fi
+
+##-----------------------------------------------------
+## synth-shell-prompt.sh
+if [ -f /home/jacobt/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
+	source /home/jacobt/.config/synth-shell/synth-shell-prompt.sh
+fi
+
+##-----------------------------------------------------
+## better-ls
+if [ -f /home/jacobt/.config/synth-shell/better-ls.sh ] && [ -n "$( echo $- | grep i )" ]; then
+	source /home/jacobt/.config/synth-shell/better-ls.sh
+fi
+
+##-----------------------------------------------------
+## alias
+if [ -f /home/jacobt/.config/synth-shell/alias.sh ] && [ -n "$( echo $- | grep i )" ]; then
+	source /home/jacobt/.config/synth-shell/alias.sh
+fi
+
+##-----------------------------------------------------
+## better-history
+if [ -f /home/jacobt/.config/synth-shell/better-history.sh ] && [ -n "$( echo $- | grep i )" ]; then
+	source /home/jacobt/.config/synth-shell/better-history.sh
+fi
+
+# Manual entry to add smartctl to my PATH
+export PATH="/usr/sbin/:$PATH"
