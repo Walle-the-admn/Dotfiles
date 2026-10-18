@@ -1,0 +1,17 @@
+# AutoFS config for the server Flint
+# Automatically mounts Flints SMB shares
+
+# Written January 10, 2026 by walle
+# Last updated May 23, 2026 by walle
+
+
+# TedFamily
+TedFamily -fstype=cifs,credentials=/home/walle/.credentials/Flint,uid=8888,gid=8888 ://192.168.86.189/TedFamily
+
+
+# Data
+Data -fstype=cifs,credentials=/home/walle/.credentials/Flint,uid=8888,gid=8888 ://192.168.86.189/Data
+
+
+# HLSF
+HLSF -fstype=cifs,credentials=/home/walle/.credentials/Flint,uid=8888,gid=8888 ://192.168.86.189/HLSF

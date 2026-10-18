@@ -1,0 +1,11 @@
+# AutoFS config for the server STG-NAS
+# Automatically mounts STG-NAS's SMB shares
+
+# Written January 10, 2026 by walle
+# Last updated January 10, 2026 by walle
+
+# Backup
+Backup -fstype=cifs,credentials=/home/walle/.credentials/STG-NAS,uid=8888,gid=8888 ://192.168.0.116/Backup
+
+# ISO
+ISO -fstype=cifs,credentials=/home/walle/.credentials/STG-NAS,uid=8888,gid=8888 ://192.168.0.116/ISO
