@@ -2,16 +2,15 @@
 # Automatically mounts Flints SMB shares
 
 # Written January 10, 2026 by walle
-# Last updated May 23, 2026 by walle
+# Last updated April 30, 2026 by walle
+
 
 
 # TedFamily
-TedFamily -fstype=cifs,credentials=/home/walle/.credentials/Flint,uid=8888,gid=8888 ://192.168.86.189/TedFamily
-
+TedFamily -fstype=cifs,credentials=/home/jacobt/.credentials/Flint,uid=1000,gid=1000 ://Flint/TedFamily
 
 # Data
-Data -fstype=cifs,credentials=/home/walle/.credentials/Flint,uid=8888,gid=8888 ://192.168.86.189/Data
-
+Data -fstype=cifs,credentials=/home/jacobt/.credentials/Flint,uid=1000,gid=1000 ://Flint/Data
 
 # HLSF
-HLSF -fstype=cifs,credentials=/home/walle/.credentials/Flint,uid=8888,gid=8888 ://192.168.86.189/HLSF
+HLSF -fstype=cifs,credentials=/home/jacobt/.credentials/Flint,uid=1000,gid=1000 ://Flint/HLSF

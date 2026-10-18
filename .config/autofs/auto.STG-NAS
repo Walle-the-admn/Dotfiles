@@ -2,10 +2,19 @@
 # Automatically mounts STG-NAS's SMB shares
 
 # Written January 10, 2026 by walle
-# Last updated January 10, 2026 by walle
+# Last updated April 30, 2026 by walle
 
 # Backup
-Backup -fstype=cifs,credentials=/home/walle/.credentials/STG-NAS,uid=8888,gid=8888 ://192.168.0.116/Backup
+Backup -fstype=cifs,credentials=/home/jacobt/.credentials/STG-NAS,uid=1000,gid=1000 ://192.168.0.116/Backup
 
 # ISO
-ISO -fstype=cifs,credentials=/home/walle/.credentials/STG-NAS,uid=8888,gid=8888 ://192.168.0.116/ISO
+ISO -fstype=cifs,credentials=/home/jacobt/.credentials/STG-NAS,uid=1000,gid=1000 ://192.168.0.116/ISO
+
+# SoftwareTools
+SoftwareTools -fstype=cifs,credentials=/home/jacobt/.credentials/STG-NAS,uid=1000,gid=1000 ://192.168.0.116/SoftwareTools
+
+# Temp
+Temp -fstype=cifs,credentials=/home/jacobt/.credentials/STG-NAS,uid=1000,gid=1000 ://192.168.0.116/Temp
+
+# STG-NAS-Backups
+STG-NAS-Backups -fstype=cifs,credentials=/home/jacobt/.credentials/STG-NAS,uid=1000,gid=1000 ://192.168.0.116/STG-NAS-Backups

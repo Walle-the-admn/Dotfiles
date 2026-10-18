@@ -2,16 +2,16 @@
 # Automatically mounts Flints NFS shares
 
 # Written January 10, 2026 by walle
-# Last updated January 12, 2026 by walle
+# Last updated April 30, 2026 by walle
 
 # Flint
 
 # Data
-Data -fstype=nfs,rw,nofail,_netdev 192.168.86.189:/mnt/Steel/Data
+#Data -fstype=nfs,rw,nofail,_netdev flint:/mnt/Steel/Data
 
 # HLSF
-HLSF -fstype=nfs,ro,nofail,_netdev 192.168.86.189:/mnt/Steel/HLSF
+#HLSF -fstype=nfs,ro,nofail,_netdev flint:/mnt/Steel/HLSF
 
 # Security
-Security -fstype=nfs,rw,nofail,_netdev 192.168.86.189:/mnt/Steel/Security
+#Security -fstype=nfs,rw,nofail,_netdev flint:/mnt/Steel/Security
 
