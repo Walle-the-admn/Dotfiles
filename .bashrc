@@ -89,7 +89,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# Alias for dit and my dotfiles
+# Alias for git and my dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # enable programmable completion features (you don't need to enable
